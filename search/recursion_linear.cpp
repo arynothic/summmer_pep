@@ -10,6 +10,7 @@ int linear_s(vector <int> arr,int n, int tar){
     if(arr[n-1]==tar){
       return 1;
     }
+    
     return linear_s(arr,n-1,tar);
   
 }
