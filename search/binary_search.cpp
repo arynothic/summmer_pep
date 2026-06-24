@@ -7,10 +7,10 @@ int binary_search(vector<int> arr, int t) {
     int right = arr.size() - 1;
 
     while (left <= right) {
-        int mid = left + (right - left) / 2;
+        int mid = left+( right-left) / 2;
 
         if (arr[mid] == t) {
-            return 1; 
+            return mid; 
         }
         else if (arr[mid] < t) {
             left = mid + 1;
@@ -19,12 +19,12 @@ int binary_search(vector<int> arr, int t) {
             right = mid - 1;
         }
     }
-    return 0;
+    return -1;
 }
 
 int main() {
     vector<int> arr = {1, 2, 3, 4, 5, 6, 7};
-    int t = 2;
+    int t = 7;
     int ans = binary_search(arr, t);
     cout << ans;
     return 0;
