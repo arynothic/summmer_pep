@@ -21,6 +21,7 @@ int digits(int n){
 }
 
 int main(){
+  
   int n = 153;
   int cnt = digits(n);
   bool ans = armstrong(n,cnt);
